@@ -237,6 +237,8 @@ describe('MQTT Node', function() {
         helper.unload();
     });
 
+    //helper functions
+
     async function startMQTTServer(){
         return new Promise((resolve, reject)=>{
             let mosca = require('mosca');
@@ -265,7 +267,6 @@ describe('MQTT Node', function() {
         });
     }
 
-    //helper functions
     async function connectMqttNode(mqttBroker) {
         return new Promise(function(resolve, reject) {
             mqttBroker.connect();
